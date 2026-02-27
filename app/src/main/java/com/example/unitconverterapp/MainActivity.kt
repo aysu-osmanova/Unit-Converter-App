@@ -72,9 +72,10 @@ fun UnitConverterApp() {
                     DropdownMenu(true , { /*TODO*/}) {
                         DropdownMenuItem({ Text ("Centimeters")},{ /*TODO*/})
                         DropdownMenuItem({ Text ("Meters")},{ /*TODO*/})
-                        DropdownMenuItem({ Text ("Centimeters")},{ /*TODO*/})
-                        DropdownMenuItem({ Text ("Feet")},{ /*TODO*/})
+                        DropdownMenuItem({ Text ("Kilometer ")},{ /*TODO*/})
                         DropdownMenuItem({ Text ("Millimeters")},{ /*TODO*/})
+                        DropdownMenuItem({ Text ("Foot")},{ /*TODO*/})
+                        DropdownMenuItem({ Text ("Mile")},{ /*TODO*/})
                     }
 
                 }
@@ -91,9 +92,10 @@ fun UnitConverterApp() {
                     DropdownMenu(true , { /*TODO*/}) {
                         DropdownMenuItem({ Text ("Centimeters")},{ /*TODO*/})
                         DropdownMenuItem({ Text ("Meters")},{ /*TODO*/})
-                        DropdownMenuItem({ Text ("Centimeters")},{ /*TODO*/})
-                        DropdownMenuItem({ Text ("Feet")},{ /*TODO*/})
+                        DropdownMenuItem({ Text ("Kilometer ")},{ /*TODO*/})
                         DropdownMenuItem({ Text ("Millimeters")},{ /*TODO*/})
+                        DropdownMenuItem({ Text ("Foot")},{ /*TODO*/})
+                        DropdownMenuItem({ Text ("Mile")},{ /*TODO*/})
                     }
                 }
 
