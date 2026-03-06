@@ -5,6 +5,7 @@ import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -14,9 +15,11 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.Icon
@@ -72,7 +75,8 @@ fun UnitConverterApp() {
     }
 
     Scaffold(modifier = Modifier.fillMaxSize(),
-        containerColor = Color(0xFFF5F7FA) ) { innerPadding ->
+        containerColor = Color(0xF2DEE4E8)
+    ) { innerPadding ->
         Column(modifier = Modifier
             .fillMaxSize()
             .padding(innerPadding),
@@ -83,9 +87,13 @@ fun UnitConverterApp() {
         ){
 
             Text("Unit Converter",
+                modifier = Modifier
+                    .background(Color(0xFFA8F3E0), shape = RoundedCornerShape(50))
+                    .padding(horizontal = 24.dp, vertical = 8.dp),
                 style = MaterialTheme.typography.headlineLarge,
-                color = Color(0xFF3F51B5))
-            Spacer(modifier = Modifier.height(16.dp))
+                color = Color(0xFF004D40)
+            )
+            Spacer(modifier = Modifier.height(32.dp))
 
             OutlinedTextField(
                 inputValue,
@@ -94,13 +102,17 @@ fun UnitConverterApp() {
                     convertUnits()
                 // Here goes what should happen, when the Value of our OutlinedTextfield changes
                 },
-                label = {Text ("Enter Value: ")})
+                label = {Text ("Enter Value: ")},
+                shape= RoundedCornerShape(20.dp)
+            )
 
             Row() {
-                // input box
                 Box {
-                    //input button
-                    Button(  {iExpanded=true}) {
+                    Button(  {iExpanded=true},
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = Color(0xFFB2DFDB),
+                            contentColor = Color(0xFF004D40))
+                    ) {
                         Text(inputUnit)
                         Icon(
                             Icons.Default.ArrowDropDown,
@@ -159,11 +171,15 @@ fun UnitConverterApp() {
                     }
 
                 }
-                Spacer(modifier = Modifier.width(16.dp))
+                Spacer(modifier = Modifier.width(32.dp))
                 //output box
                 Box {
                     //output button
-                    Button(  {oExpanded= true}) {
+                    Button(  {oExpanded= true},
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = Color(0xFFB2DFDB),
+                            contentColor = Color(0xFF004D40))
+                    ) {
                         Text(outputUnit)
                         Icon(
                             Icons.Default.ArrowDropDown,
